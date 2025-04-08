@@ -1,10 +1,11 @@
+import os
 import streamlit as st
 import pandas as pd
 from sqlalchemy import create_engine
 from plot import plot 
 
-
-engine = create_engine('mysql+pymysql://root:1337@localhost:3306/trabalho')
+db_url = f"mysql+pymysql://{os.environ['DB_USER']}:{os.environ['DB_PASS']}@{os.environ['DB_HOST']}:{os.environ['DB_PORT']}/{os.environ['DB_NAME']}"
+engine = create_engine(db_url)
 
 st.set_page_config(page_title="Dashboard", page_icon="resources/icon.png", layout="wide")
 
