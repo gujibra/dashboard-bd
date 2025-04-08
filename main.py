@@ -1,8 +1,9 @@
-import os
 import streamlit as st
 import pandas as pd
 from sqlalchemy import create_engine
 from plot import plot 
+
+
 
 db_url = f"mysql+pymysql://{os.environ['DB_USER']}:{os.environ['DB_PASS']}@{os.environ['DB_HOST']}:{os.environ['DB_PORT']}/{os.environ['DB_NAME']}"
 engine = create_engine(db_url)
