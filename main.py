@@ -5,7 +5,7 @@ from plot import plot
 
 
 
-db_url = f"mysql+pymysql://{os.environ['DB_USER']}:{os.environ['DB_PASS']}@{os.environ['DB_HOST']}:{os.environ['DB_PORT']}/{os.environ['DB_NAME']}"
+db_url = f"mysql+pymysql://root:MgpsFDPiSUjyAnxvabvbkrVNaqKDDqOh@caboose.proxy.rlwy.net:11318/railway"
 engine = create_engine(db_url)
 
 st.set_page_config(page_title="Dashboard", page_icon="resources/icon.png", layout="wide")
